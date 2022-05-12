@@ -5,6 +5,7 @@ import com.inserta.krootgestionv2.repos.ActividadesRepo;
 
 import com.inserta.krootgestionv2.repos.SociosRepo;
 import com.inserta.krootgestionv2.repos.UsuariosRepo;
+import com.inserta.krootgestionv2.services.ComunicadosServices;
 import com.inserta.krootgestionv2.services.EncuestasService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -32,7 +33,7 @@ public class ApiController {
     private EncuestasService encuestasService;
 
     @Autowired
-    private ComunicadosService comunicadosService;
+    private ComunicadosServices comunicadosService;
 
     @GetMapping("/actividades")
     public List<Actividad> getActividad() {
