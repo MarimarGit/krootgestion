@@ -5,7 +5,23 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Repository
 @RepositoryRestResource(path = "actividades")
 public interface ActividadesRepo extends JpaRepository<Actividad,Integer> {
+
+
+
+    public List<Actividad> findByIdTipo(int idTipo);
+
+
+
+
+
+
+
+
+
 }
