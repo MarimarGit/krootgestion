@@ -41,5 +41,6 @@ public class Socio {
     private int idFormaPago;
     @Column (columnDefinition = "TIMESTAMP")
     private LocalDateTime fechaRegistro;
+    @Column (columnDefinition = "TIMESTAMP")
     private LocalDateTime fechaUltimoAcceso;
 }
