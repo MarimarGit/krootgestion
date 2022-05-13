@@ -18,6 +18,6 @@ public class TipoActividad {
     private int id;
     private String nombre;
     private String descripcion;
-    @OneToMany(mappedBy = "tipoActividad")
-    private List<Actividad> listaActividades;
+   /* @OneToMany(mappedBy = "tipoActividad")
+    private List<Actividad> listaActividades;*/
 }

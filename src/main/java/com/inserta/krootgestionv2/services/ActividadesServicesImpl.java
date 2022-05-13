@@ -19,14 +19,12 @@ public class ActividadesServicesImpl implements ActividadesService {
 
 
 
-   @Override
-    public List<Actividad> getActividadesByTipo(int tipo) {
-        TipoActividad tipoActividad = new TipoActividad();
-        tipoActividad.setId(tipo);
-        return actividadesRepo.findByTipoActividad(tipoActividad);
-    }
-
-
+//   @Override
+//    public List<Actividad> getActividadesByTipo(int tipo) {
+//        TipoActividad tipoActividad = new TipoActividad();
+//        tipoActividad.setId(tipo);
+//        return actividadesRepo.findByTipoActividad(tipoActividad);
+//    }
 
 
 }

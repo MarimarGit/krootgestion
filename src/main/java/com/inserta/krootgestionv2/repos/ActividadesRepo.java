@@ -13,18 +13,7 @@ import java.util.List;
 @RepositoryRestResource(path = "actividades")
 public interface ActividadesRepo extends JpaRepository<Actividad,Integer> {
 
-
-
-    public List<Actividad> findByTipoActividad(TipoActividad tipoActividad);
-
-
-
-
-
-
-
-
-
+    /*public List<Actividad> findByTipoActividad(TipoActividad tipoActividad);*/
 
 
 }
