@@ -4,6 +4,7 @@ import com.inserta.krootgestionv2.models.*;
 import com.inserta.krootgestionv2.services.ActividadesService;
 import com.inserta.krootgestionv2.services.ComunicadosServices;
 import com.inserta.krootgestionv2.services.EncuestasService;
+import com.inserta.krootgestionv2.services.SociosService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.GetMapping;
