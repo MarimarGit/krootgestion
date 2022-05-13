@@ -1,6 +1,7 @@
 package com.inserta.krootgestionv2.services;
 
 import com.inserta.krootgestionv2.models.Actividad;
+import com.inserta.krootgestionv2.models.TipoActividad;
 import com.inserta.krootgestionv2.repos.ActividadesRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,9 +19,11 @@ public class ActividadesServicesImpl implements ActividadesService {
 
 
 
-    @Override
+   @Override
     public List<Actividad> getActividadesByTipo(int tipo) {
-        return actividadesRepo.findByIdTipo(tipo);
+        TipoActividad tipoActividad = new TipoActividad();
+        tipoActividad.setId(tipo);
+        return actividadesRepo.findByTipoActividad(tipoActividad);
     }
 
 

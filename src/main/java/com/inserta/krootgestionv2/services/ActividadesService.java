@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ActividadesService {
 
-    public List<Actividad> getActividadesByTipo(int tipo);
+   public List<Actividad> getActividadesByTipo(int tipo);
 
 
 }

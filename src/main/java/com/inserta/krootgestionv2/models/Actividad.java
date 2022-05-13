@@ -20,7 +20,9 @@ public class Actividad {
     private String nombre;
     private String descripcionCorta;
     private String descripcionLarga;
-    private int idTipo;
+    @ManyToOne
+    @JoinColumn(name = "id_tipo", referencedColumnName = "id")
+    private TipoActividad tipoActividad;
     private String lugar;
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;

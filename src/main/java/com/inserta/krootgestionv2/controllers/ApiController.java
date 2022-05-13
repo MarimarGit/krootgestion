@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v2")
+@RequestMapping("/api/v1")
 public class ApiController {
 
     @Autowired
@@ -47,4 +47,6 @@ public class ApiController {
     public List<Socio> getSociosByFecha(@PathVariable LocalDateTime fecha){
         return sociosService.getSociosByFechaUltimoAcceso(fecha);
     }
+
+
 }
