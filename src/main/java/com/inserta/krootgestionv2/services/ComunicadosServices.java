@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ComunicadosServices {
 
-    public List<Comunicado> getComunicadosByIdActividad(int id);
+
 
 }

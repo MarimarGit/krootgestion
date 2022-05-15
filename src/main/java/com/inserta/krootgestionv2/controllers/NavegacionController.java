@@ -6,23 +6,35 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class NavegacionController {
 
-    @GetMapping("/actividades")
+    @GetMapping("/actividadesPg")
     public String irAActividades(){
-        return  "actividades";
+        return  "actividades-pg";
     }
 
-    @GetMapping("/comunicados")
+    @GetMapping("/tiposActividadPg")
+    public String IrATiposActividad(){
+        return  "tiposActividad-pg";
+    }
+
+
+
+    @GetMapping("/comunicadosPg")
     public String irAComunicados(){
-        return  "comunicados";
+        return "comunicados-pg";
     }
 
-    @GetMapping("/encuestas")
+    @GetMapping("/encuestasPg")
     public String irAEncuestas(){
-        return  "encuestas";
+        return "encuestas-pg";
     }
 
-    @GetMapping("/socios")
+    @GetMapping("/sociosPg")
     public String irASocios(){
-        return  "socios";
+        return  "socios-pg";
+    }
+
+    @GetMapping("/usuarios")
+    public String irAUsuarios(){
+        return  "usuarios";
     }
 }
