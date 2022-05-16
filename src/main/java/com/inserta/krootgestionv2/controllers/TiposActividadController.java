@@ -22,7 +22,7 @@ public class TiposActividadController {
 
 
     @GetMapping
-    public ResponseEntity<Page<TipoActividad>> listarBibliotecas(Pageable pageable){
+    public ResponseEntity<Page<TipoActividad>> listarTiposActividad(Pageable pageable){
         return ResponseEntity.ok(tiposActividadRepo.findAll(pageable));
     }
 
