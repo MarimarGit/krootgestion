@@ -33,14 +33,7 @@ public class ApiController {
     public List<Encuesta> getEncuestas(@PathVariable String nombre){
         return encuestasService.findByNombre(nombre);
     }
-    @GetMapping("/comunicados/actividad/{id}")
-    public List<Comunicado> getComunicados(@PathVariable int id){
-        return comunicadosService.getComunicadosByIdActividad(id);
-    }
-//    @GetMapping("/actividades/tipo/{id}")
-//    public List<Actividad> getActividadesByTipo(@PathVariable int id){
-//        return actividadesService.getActividadesByTipo(id);
-//    }
+
     @GetMapping("/socios/fechaacceso/{fecha}")
     public List<Socio> getSociosByFecha(@PathVariable LocalDateTime fecha){
         return sociosService.getSociosByFechaUltimoAcceso(fecha);

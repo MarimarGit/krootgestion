@@ -12,8 +12,4 @@ public class ComunicadosServicesImpl implements ComunicadosServices {
     @Autowired
     private ComunicadosRepo comunicadosRepo;
 
-    @Override
-    public List<Comunicado> getComunicadosByIdActividad(int id) {
-        return  comunicadosRepo.findComunicadoByIdActividad(id);
-    }
 }
