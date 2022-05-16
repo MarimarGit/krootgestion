@@ -15,7 +15,7 @@ import java.net.URI;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v2/actividades")
+@RequestMapping("/api/v3/actividades")
 public class ActividadController {
 
     @Autowired

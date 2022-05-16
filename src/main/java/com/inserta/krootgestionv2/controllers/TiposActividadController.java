@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v2/tiposActividad")
+@RequestMapping("/api/v3/tiposActividad")
 
 public class TiposActividadController {
 
@@ -28,7 +28,6 @@ public class TiposActividadController {
 
     @PostMapping
     public ResponseEntity<TipoActividad> guardarTipoActividad(@RequestBody TipoActividad tipoActividad) {
-        System.out.println("Entro a guardar nuevo tipoActividad");
         TipoActividad tipoActividadGuardado = tiposActividadRepo.save(tipoActividad);
         URI ubicacion = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(tipoActividadGuardado.getId()).toUri();
 
