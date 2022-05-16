@@ -4,7 +4,7 @@ import com.inserta.krootgestionv2.models.Encuesta;
 
 import java.util.List;
 
-public interface EncuestasService {
+public interface EncuestasServices {
     /**
      * Obtiene la encuesta por el nombre de esta
      * @param nombre String con el nombre de la encuesta

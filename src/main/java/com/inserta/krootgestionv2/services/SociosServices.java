@@ -5,6 +5,6 @@ import com.inserta.krootgestionv2.models.Socio;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface SociosService {
+public interface SociosServices {
     public List<Socio> getSociosByFechaUltimoAcceso(LocalDateTime fecha);
 }

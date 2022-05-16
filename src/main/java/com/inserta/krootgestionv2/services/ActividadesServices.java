@@ -1,5 +1,6 @@
 package com.inserta.krootgestionv2.services;
 
-public interface ComunicadosServices {
+public interface ActividadesServices {
+
 
 }

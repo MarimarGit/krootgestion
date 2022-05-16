@@ -1,7 +1,7 @@
 package com.inserta.krootgestionv2.controllers;
 
 import com.inserta.krootgestionv2.models.Usuario;
-import com.inserta.krootgestionv2.services.UsuariosService;
+import com.inserta.krootgestionv2.services.UsuariosServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/usuarios")
 public class UsuarioController {
     @Autowired
-    private UsuariosService usuariosServices;
+    private UsuariosServices usuariosServices;
 
     @PostMapping("/login")
     public String login(@RequestParam String pass, @RequestParam String email, HttpSession session, Model model){

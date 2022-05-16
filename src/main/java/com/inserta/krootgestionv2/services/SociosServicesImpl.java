@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class SociosServiceImpl implements SociosService{
+public class SociosServicesImpl implements SociosServices {
     @Autowired
     private SociosRepo sociosRepo;
 

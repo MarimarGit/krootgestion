@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NavegacionController {
-
     @GetMapping("/actividadesPg")
     public String irAActividades(){
         return  "actividades-pg";
@@ -15,8 +14,6 @@ public class NavegacionController {
     public String IrATiposActividad(){
         return  "tiposActividad-pg";
     }
-
-
 
     @GetMapping("/comunicadosPg")
     public String irAComunicados(){

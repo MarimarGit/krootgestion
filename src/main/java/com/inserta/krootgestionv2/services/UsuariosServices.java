@@ -2,7 +2,7 @@ package com.inserta.krootgestionv2.services;
 
 import com.inserta.krootgestionv2.models.Usuario;
 
-public interface UsuariosService {
+public interface UsuariosServices {
 
     /**
      * Obtiene un usuario con el email y la contraseña indicados

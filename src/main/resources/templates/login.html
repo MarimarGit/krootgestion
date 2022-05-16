@@ -17,7 +17,7 @@
         <div class="container-fluid text-center mb-5 mt-lg-5">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-lg-5">
-                    <img src="/imagenes/KROOT-logo.png" class="img-fluid animate__animated animate__flipInY"  alt="Logo KROOTGESTION">
+                    <img src="/imagenes/KROOT-logo.png" id="logo" class="img-fluid animate__animated animate__flipInY"  alt="Logo KROOTGESTION" ondblclick="cambiarSuperLogo()">
                     <p class="text-info">Con nosotros, podrás gestionar socios de la forma más efectiva, atraer y retener a los socios y gestionar los ingresos.</p>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 col-xl-6 mt-lg-5">
@@ -46,8 +46,10 @@
                             </form>
 
                         </div>
-                        <div th:if="${mensaje}" class="card-footer text-muted alert alert-danger">
-                            <span class="alert-danger"></span>
+                        <div th:if="${mensaje}" class="card-footer">
+                            <div class="alert alert-danger">
+                                <span th:text="${mensaje}"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,8 +64,8 @@
     </div>
 
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
         function mostrarOcultarPass(){
@@ -73,6 +75,26 @@
             }else{
                 tipo.type = "password";
             }
+        }
+
+        function cambiarSuperLogo(){
+            //logo
+            let logo = document.getElementById("logo");
+            const music = new Audio('/audio/vengadores.mp3');
+
+            if (logo.src === "http://localhost:8080/imagenes/KROOT-logo.png") {
+                logo.src ="/imagenes/SUPERKROOT-logo.png";
+                //música
+                music.play();
+                //music.loop =true;
+                //music.playbackRate = 2;
+                //music.pause();
+            } else {
+                logo.src ="/imagenes/KROOT-logo.png";
+                music.pause();
+            }
+
+
         }
     </script>
 

@@ -70,8 +70,6 @@ public class TiposActividadController {
         if (!tipoActividadActual.isPresent()) { //Si no lo encontramos devolvemos un no podemos procesar la petición
             return ResponseEntity.unprocessableEntity().build();
         }
-
         return ResponseEntity.ok(tipoActividadActual.get()); //Devolvemos el tipoActividad en Json
     }
-
 }

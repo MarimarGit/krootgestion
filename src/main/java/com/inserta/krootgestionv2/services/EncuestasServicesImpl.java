@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class EncuestasServicesImpl implements EncuestasService {
+public class EncuestasServicesImpl implements EncuestasServices {
     @Autowired
     private EncuestasRepo encuestasRepo;
 

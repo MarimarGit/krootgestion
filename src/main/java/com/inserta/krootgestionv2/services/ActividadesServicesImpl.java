@@ -6,21 +6,10 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ActividadesServicesImpl implements ActividadesService {
+public class ActividadesServicesImpl implements ActividadesServices {
 
     @Autowired
     private ActividadesRepo actividadesRepo;
-
-
-
-
-//   @Override
-//    public List<Actividad> getActividadesByTipo(int tipo) {
-//        TipoActividad tipoActividad = new TipoActividad();
-//        tipoActividad.setId(tipo);
-//        return actividadesRepo.findByTipoActividad(tipoActividad);
-//    }
-
 
 }
 

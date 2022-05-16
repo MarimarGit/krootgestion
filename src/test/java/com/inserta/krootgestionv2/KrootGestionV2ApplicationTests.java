@@ -1,7 +1,7 @@
 package com.inserta.krootgestionv2;
 
 import com.inserta.krootgestionv2.models.Usuario;
-import com.inserta.krootgestionv2.services.UsuariosService;
+import com.inserta.krootgestionv2.services.UsuariosServices;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class KrootGestionV2ApplicationTests {
 
     @Autowired
-    private UsuariosService usuariosService;
+    private UsuariosServices usuariosService;
 
     @Test
     public void testGetUsuarioByEmailAndPass() {

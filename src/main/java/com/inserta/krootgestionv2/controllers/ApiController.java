@@ -1,10 +1,8 @@
 package com.inserta.krootgestionv2.controllers;
 
 import com.inserta.krootgestionv2.models.*;
-import com.inserta.krootgestionv2.services.ActividadesService;
-import com.inserta.krootgestionv2.services.ComunicadosServices;
-import com.inserta.krootgestionv2.services.EncuestasService;
-import com.inserta.krootgestionv2.services.SociosService;
+import com.inserta.krootgestionv2.services.EncuestasServices;
+import com.inserta.krootgestionv2.services.SociosServices;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.ui.Model;
@@ -18,16 +16,10 @@ import java.util.List;
 public class ApiController {
 
     @Autowired
-    private EncuestasService encuestasService;
+    private EncuestasServices encuestasService;
 
     @Autowired
-    private ComunicadosServices comunicadosService;
-
-    @Autowired
-    private ActividadesService actividadesService;
-
-    @Autowired
-    private SociosService sociosService;
+    private SociosServices sociosService;
 
     @GetMapping("/encuestas/{nombre}")
     public List<Encuesta> getEncuestas(@PathVariable String nombre){
@@ -38,10 +30,6 @@ public class ApiController {
     public List<Socio> getSociosByFecha(@PathVariable LocalDateTime fecha){
         return sociosService.getSociosByFechaUltimoAcceso(fecha);
     }
-   /* @DeleteMapping("/actividades/{id}")
-    public void deleteActividadPorId() {
-        actividadesService.deleteActividadById(id);
-    }*/
 
     @ResponseBody
     @GetMapping("/socios/fechaUltimoAcceso/{year}/{month}/{day}")
