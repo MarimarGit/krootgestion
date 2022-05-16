@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@RepositoryRestResource(path = "encuestas")
+@RepositoryRestResource(path = "encuestas", collectionResourceRel = "encuestas")
 public interface EncuestasRepo extends JpaRepository<Encuesta, Integer> {
     /**
      * Obtiene la encuesta por el nombre de esta

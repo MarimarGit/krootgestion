@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
-@RepositoryRestResource(path = "usuarios")
+@RepositoryRestResource(path = "usuarios", collectionResourceRel = "usuarios")
 public interface UsuariosRepo extends JpaRepository<Usuario, Integer> {
     /**
      * Obtiene el usuario con email y pass pasados por parámetros

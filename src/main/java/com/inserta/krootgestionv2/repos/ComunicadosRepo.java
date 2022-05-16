@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@RepositoryRestResource(path = "comunicados")
+@RepositoryRestResource(path = "comunicados", collectionResourceRel = "comunicados")
 public interface ComunicadosRepo extends JpaRepository<Comunicado, Integer> {
 
     public List<Comunicado> findComunicadoByIdActividad(int id);

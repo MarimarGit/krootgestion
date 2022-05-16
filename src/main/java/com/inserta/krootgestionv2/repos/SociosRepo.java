@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
-@RepositoryRestResource(path = "socios")
+@RepositoryRestResource(path = "socios", collectionResourceRel = "socios")
 public interface SociosRepo extends JpaRepository<Socio, Integer> {
 
     /**

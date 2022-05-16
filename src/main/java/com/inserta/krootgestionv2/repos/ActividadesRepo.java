@@ -6,7 +6,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(path = "actividades")
+@RepositoryRestResource(path = "actividades", collectionResourceRel = "actividades")
 
 public interface ActividadesRepo extends JpaRepository<Actividad, Integer> {
 }
