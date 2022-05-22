@@ -21,26 +21,7 @@
         <!-- Contenido -->
         <div class="col d-flex flex-column h-100">
             <!-- Barra de navegación superior -->
-            <nav class="row navbar navbar-light" style="background-color: #e3f2fd;">
-                <div class="container-fluid">
-                    <a class="navbar-brand"></a>
-                        <div class="dropdown">
-                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUsuario" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="Avatar usuario" width="40" height="40" class="rounded-circle">
-                                <span th:text="${session.usuarioActivo.email}" class="d-none d-sm-inline mx-1">Usuario</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Id sesión: <span th:text="${#session.getId()}" ></span></a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/usuarios/logout">Logout</a></li>
-                            </ul>
-                        </div>
-
-                </div>
-            </nav>
+            <nav th:replace="fragmentos/navegacion-superior::navegacion-superior"></nav>
             <!-- Fin barra de navegación superior -->
 
             <!-- Contenido de la página -->

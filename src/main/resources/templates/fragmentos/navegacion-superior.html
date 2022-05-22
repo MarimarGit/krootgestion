@@ -1,0 +1,21 @@
+<nav th:fragment="navegacion-superior"  class="row navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="dropdownUsuario" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://thispersondoesnotexist.com/image" alt="Foto usuario" width="40" height="40" class="rounded-circle">
+                <span th:text="${session.usuarioActivo.email}" class="d-none d-sm-inline mx-1">Usuario</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow dropdown-menu-end" aria-labelledby="dropdownUsuario">
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Último acceso: <span th:text="${#temporals.format(session.usuarioActivo.fechaUltimoAcceso, 'dd/MMM/yyyy - hh:mm')}" ></span></a></li>
+                <!--<li><a class="dropdown-item" href="#">Id sesión: <span th:text="${#session.getId()}" ></span></a></li>-->
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/usuarios/logout">Logout</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
