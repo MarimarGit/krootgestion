@@ -19,4 +19,7 @@ public interface SociosRepo extends JpaRepository<Socio, Integer> {
      * @return List de socios
      */
     List<Socio> findByFechaUltimoAcceso(@DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime fecha);
+
+
+
 }
